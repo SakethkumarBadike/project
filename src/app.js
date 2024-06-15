@@ -12,3 +12,5 @@ app.use(express.static("public"))    //many times we want to store some files/fo
 app.use(cookieParser())      //ccokie-parser -->usecase-- from our server can acsess and set cookies from user browser.can store some secure in users browser which an only read and removed by server.
 
 
+import userRouter from "./routes/user.routes.js";
+app.use("/api/v1/users",userRouter);
